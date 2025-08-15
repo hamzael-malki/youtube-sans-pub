@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>YouTube Sans Pub</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="url"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #777;
+        }
+
+        .centered {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            .container {
+                margin: 20px auto;
+                padding: 10px;
+                max-width: 98%;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            label {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            input[type="url"] {
+                width: calc(100% - 20px);
+                padding: 6px;
+            }
+
+            input[type="submit"] {
+                padding: 8px 16px;
+            }
+
+            #result {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>YouTube Sans Pub</h1>
+        <form>
+            <label for="youtubeLink">Lien YouTube :</label>
+            <input type="url" id="youtubeLink" name="youtubeLink" placeholder="https://www.youtube.com/watch?v=..."
+                required>
+            <br><br>
+            <input type="submit" value="Ouvrir sans pub">
+        </form>
+        <div id="result"></div>
+        <div id="mention" class="centered"></div>
+    </div>
+</body>
+
+</html>
